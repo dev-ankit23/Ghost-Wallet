@@ -1,12 +1,51 @@
-# React + Vite
+# 👻 Ghost Wallet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Ghost Wallet** is a simple Solana wallet generator built with React.  
+It allows users to:
 
-Currently, two official plugins are available:
+- 🔐 Generate a secure 12-word seed phrase (mnemonic)
+- 🪙 Derive a Solana wallet from that phrase
+- 📬 Display the public key associated with the generated wallet
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Generates a BIP39-compliant 12-word mnemonic
+- Shows the mnemonic in a clean UI (no console logging)
+- Derives the Solana wallet using `@solana/web3.js`
+- Displays the public key of the wallet
+- Clean, dark-themed interface with social footer
+
+---
+
+## 🧠 How It Works
+
+1. Click **"Create Seed Phrase"**
+2. The app uses `bip39` to generate a 12-word mnemonic
+3. That mnemonic is used to derive a Solana keypair
+4. The public key is shown in the UI
+
+---
+
+## 🔗 Built With
+
+- **React** – UI framework
+- **bip39** – Seed phrase generation
+- **@solana/web3.js** – Solana wallet creation
+- **React Icons** – For footer icons
+- **CSS** – Custom dark styling
+
+---
+
+## 👤 Author
+
+Made with ❤️ by **dev-ankit**  
+[X (Twitter)](https://x.com/ankitwt7) • [LinkedIn](https://linkedin.com/in/devankit23)
+
+---
+
+## ⚠️ Disclaimer
+
+> This project is for learning and demonstration purposes only.  
+> **Do not use it to store real funds.**
