@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import "./App.css";
 import { generateMnemonic } from "bip39";
 import { SolanaWallet } from "./components/SolanaWallet";
+import { FaXTwitter, FaLinkedin } from "react-icons/fa6"; // 🠔 NEW
 
 const App = () => {
-  const [mnemonic, setMnemonic] = useState("");
+  const [mnemonic, setMnemonic] = useState([]);
 
   const createMnemonic = async () => {
     const phrase = await generateMnemonic();
@@ -31,10 +32,32 @@ const App = () => {
               </div>
             ))}
           </div>
-          {/* <p className="copy-hint">📋 Click Anywhere To Copy</p> */}
           <SolanaWallet />
         </div>
       )}
+
+      {/* ✅ FOOTER */}
+      <footer className="footer">
+        <p>
+          Made by <strong>dev-ankit</strong>
+        </p>
+        <div className="social-links">
+          <a
+            href="https://x.com/ankitwt7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaXTwitter size={22} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/devankit23/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin size={22} />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };
